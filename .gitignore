@@ -1,0 +1,18 @@
+# Default ignored files
+/.idea/
+/target/
+
+/rpc-common/target/
+/rpc-core/target/
+/example-client/target/
+/example-server/target/
+
+/fosu-rpc.iml
+/rpc-common/rpc-common.iml
+/rpc-core/rpc-core.iml
+/example-client/example-client.iml
+/example-server/example-server.iml
+
+.classpath
+.project
+.DS_Store
