@@ -7,11 +7,7 @@
 /example-client/target/
 /example-server/target/
 
-/fosu-rpc.iml
-/rpc-common/rpc-common.iml
-/rpc-core/rpc-core.iml
-/example-client/example-client.iml
-/example-server/example-server.iml
+*.iml
 
 .classpath
 .project

@@ -121,6 +121,10 @@ public class ExtensionLoader<T> {
         return classes;
     }
 
+    /**
+     * 加载某个扩展文件
+     * @param extensionClasses
+     */
     private void loadDirectory(Map<String, Class<?>> extensionClasses) {
         String fileName = ExtensionLoader.SERVICE_DIRECTORY + type.getName();
         try {
@@ -138,6 +142,12 @@ public class ExtensionLoader<T> {
         }
     }
 
+    /**
+     * 加载文件中的扩展类
+     * @param extensionClasses
+     * @param classLoader
+     * @param resourceUrl
+     */
     private void loadResource(Map<String, Class<?>> extensionClasses, ClassLoader classLoader, URL resourceUrl) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(resourceUrl.openStream(), UTF_8))) {
             String line;
