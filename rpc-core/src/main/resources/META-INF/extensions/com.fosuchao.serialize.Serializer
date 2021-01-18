@@ -1,0 +1,2 @@
+protostuff=com.fosuchao.serialize.Serializer.protostuff.ProtostuffSerializer
+Kryo=com.fosuchao.serialize.Serializer.protostuff.KryoSerializer

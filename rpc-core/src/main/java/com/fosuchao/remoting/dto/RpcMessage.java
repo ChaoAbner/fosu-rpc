@@ -30,7 +30,7 @@ public class RpcMessage {
     /**
      * request ID
      */
-    private int requerstId;
+    private int requestId;
 
     /**
      * 数据

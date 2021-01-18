@@ -66,7 +66,6 @@ public class ServiceProviderImpl implements ServiceProvider {
             rpcServiceProperties.setServiceName(serviceName);
             String rpcServiceName = rpcServiceProperties.toRpcServiceName();
             this.addService(service, serviceRelatedInterface, rpcServiceProperties);
-            // todo 替换port常量
             serviceRegistry.registryService(rpcServiceName, new InetSocketAddress(host, NettyRpcServer.PORT));
         } catch (UnknownHostException e) {
             log.error("获取本地地址错误：getHostAddress(), {}", e.getMessage());

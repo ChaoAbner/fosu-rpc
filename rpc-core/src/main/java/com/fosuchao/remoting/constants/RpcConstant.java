@@ -12,31 +12,31 @@ public class RpcConstant {
     /**
      * 魔数
      */
-    private static final byte[] MAGIC_NUMBER = {(byte) 'f', (byte) 'o', (byte) 's', (byte) 'u'};
+    public static final byte[] MAGIC_NUMBER = {(byte) 'f', (byte) 'o', (byte) 's', (byte) 'u'};
 
     /**
      * 默认编码
      */
-    private static final Charset DEFAULT_CHARSET = StandardCharsets.UTF_8;
+    public static final Charset DEFAULT_CHARSET = StandardCharsets.UTF_8;
 
     /**
      * 版本信息
      */
-    private static final byte VERSION = 1;
+    public static final byte VERSION = 1;
 
     /**
      * 总长度
      */
-    private static final byte TOTAL_LENGTH = 16;
+    public static final byte TOTAL_LENGTH = 16;
 
     /**
      * 消息类型
      */
-    private static final byte REQUEST_TYPE = 1;
+    public static final byte REQUEST_TYPE = 1;
 
-    private static final byte RESPONSE_TYPE = 2;
+    public static final byte RESPONSE_TYPE = 2;
 
-    private static final byte HEARTBEAT_REQUEST_TYPE = 3;
+    public static final byte HEARTBEAT_REQUEST_TYPE = 3;
 
     public static final byte HEARTBEAT_RESPONSE_TYPE = 4;
 
