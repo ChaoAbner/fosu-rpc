@@ -1,4 +1,4 @@
-package com.fosuchao.utils;
+package com.fosuchao.utils.concurrent.threadpool;
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +15,31 @@ public class ThreadPoolFactoryUtil {
     private static final Map<String, ExecutorService> THREAD_POOLS = new ConcurrentHashMap<>();
 
     private ThreadPoolFactoryUtil() {}
+
+    public static ExecutorService createCustomThreadPoolIfAbsent(String threadNamePrefix) {
+        CustomThreadPoolConfig customThreadPoolConfig = new CustomThreadPoolConfig();
+        return createCustomThreadPoolIfAbsent(customThreadPoolConfig, threadNamePrefix, false);
+    }
+
+    public static ExecutorService createCustomThreadPoolIfAbsent(CustomThreadPoolConfig config,
+                                                                 String threadNamePrefix, boolean daemon) {
+        ExecutorService threadPool = THREAD_POOLS.computeIfAbsent(threadNamePrefix, k ->
+                createThreadPool(config, threadNamePrefix, daemon));
+
+        // 如果threadPool没shutdown的话就重新创建一个
+        if (threadPool.isShutdown() || threadPool.isTerminated()) {
+            THREAD_POOLS.remove(threadNamePrefix);
+            threadPool = createThreadPool(config, threadNamePrefix, daemon);
+            THREAD_POOLS.put(threadNamePrefix, threadPool);
+        }
+        return threadPool;
+    }
+
+    private static ExecutorService createThreadPool(CustomThreadPoolConfig config, String threadNamePrefix, Boolean daemon) {
+        ThreadFactory threadFactory = createThreadFactory(threadNamePrefix, daemon);
+        return new ThreadPoolExecutor(config.getCorePoolSize(), config.getMaximumPoolSize(),
+                config.getKeepAliveTime(), config.getUnit(), config.getWorkQueue(), threadFactory);
+    }
 
     public static ThreadFactory createThreadFactory(String threadNamePrefix, Boolean isDaemon) {
         if (threadNamePrefix != null) {

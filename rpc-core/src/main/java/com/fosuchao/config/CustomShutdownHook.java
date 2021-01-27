@@ -2,7 +2,7 @@ package com.fosuchao.config;
 
 import com.fosuchao.registry.zk.utils.CuratorUtil;
 import com.fosuchao.remoting.transport.netty.server.NettyRpcServer;
-import com.fosuchao.utils.ThreadPoolFactoryUtil;
+import com.fosuchao.utils.concurrent.threadpool.ThreadPoolFactoryUtil;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetAddress;

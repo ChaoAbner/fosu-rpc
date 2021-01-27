@@ -8,7 +8,7 @@ import com.fosuchao.provider.ServiceProviderImpl;
 import com.fosuchao.remoting.transport.netty.codec.RpcMessageDecoder;
 import com.fosuchao.remoting.transport.netty.codec.RpcMessageEncoder;
 import com.fosuchao.utils.RuntimeUtil;
-import com.fosuchao.utils.ThreadPoolFactoryUtil;
+import com.fosuchao.utils.concurrent.threadpool.ThreadPoolFactoryUtil;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
