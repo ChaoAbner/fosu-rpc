@@ -8,6 +8,7 @@ import java.lang.annotation.Annotation;
 
 /**
  * Created by Chao Ye on 2021/2/6
+ * 统用包扫描器
  */
 public class CustomScanner extends ClassPathBeanDefinitionScanner {
 
