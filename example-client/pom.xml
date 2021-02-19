@@ -11,5 +11,19 @@
 
     <artifactId>example-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.fosuchao</groupId>
+            <artifactId>rpc-core</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
+        <dependency>
+            <groupId>com.fosuchao</groupId>
+            <artifactId>hello-service-api</artifactId>
+            <version>${project.version}</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 </project>

@@ -23,6 +23,7 @@ import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.concurrent.DefaultEventExecutorGroup;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Component;
 
 import java.net.InetAddress;
 import java.util.concurrent.TimeUnit;
@@ -31,6 +32,7 @@ import java.util.concurrent.TimeUnit;
  * Created by Chao Ye on 2021/1/16
  */
 @Slf4j
+@Component
 public class NettyRpcServer {
 
     public final static int PORT = 9999;

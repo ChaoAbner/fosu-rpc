@@ -9,19 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>example-server</artifactId>
+    <artifactId>hello-service-api</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.fosuchao</groupId>
-            <artifactId>hello-service-api</artifactId>
-            <version>${project.version}</version>
-        </dependency>
 
-        <dependency>
-            <groupId>com.fosuchao</groupId>
-            <artifactId>rpc-core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 </project>
