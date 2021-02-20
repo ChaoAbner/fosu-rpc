@@ -7,6 +7,7 @@ import com.fosuchao.exception.SerializationException;
 import com.fosuchao.remoting.dto.RpcRequest;
 import com.fosuchao.remoting.dto.RpcResponse;
 import com.fosuchao.serialize.Serializer;
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

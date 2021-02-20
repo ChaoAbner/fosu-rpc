@@ -43,7 +43,6 @@ public class ServiceProviderImpl implements ServiceProvider {
         }
         serviceMap.put(rpcServiceName, service);
         registeredService.add(rpcServiceName);
-        // todo 不用注册？
         log.info("添加service：{} 和接口：{}", rpcServiceName, service.getClass().getInterfaces());
     }
 
