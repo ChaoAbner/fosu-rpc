@@ -1,6 +1,7 @@
 ## 介绍
 
 fosu-rpc是基于Netty+Zookeeper+Protostuff实现的RPC框架。
+
 项目开发流程和详情请查看：[详情](https://github.com/ChaoAbner/fosu-rpc/tree/master/docs)
 
 ## 功能
