@@ -1,6 +1,6 @@
 ## 介绍
 
-fosu-rpc是基于Netty+Zookeeper实现的RPC框架。
+fosu-rpc是基于Netty+Zookeeper+Protostuff实现的RPC框架。
 
 ## 功能
 
